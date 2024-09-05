@@ -619,47 +619,119 @@
 // }
 
 // friend class
+// #include<iostream>
+// using namespace std;
+// class Complex;
+// class Calculator{
+//     public:
+//     int add(int a, int b){
+//         return a+b;
+//     } 
+//     int sumRealComplex(Complex, Complex);
+//     int sumComComplex(Complex,Complex);
+  
+// };
+// class Complex{
+//       int a,b;
+//       friend class Calculator;
+//       public:
+//       void setNumber(int n1,int n2){
+//         a = n1;
+//         b = n2;
+//       }
+//       void printNumber(){
+//         cout<<"your complex number is : "<<a<<" + "<<b<<"i"<<endl;
+//       }
+// };
+// int Calculator::sumRealComplex(Complex o1, Complex o2){
+//     return(o1.a + o2.a);
+// }
+// int Calculator::sumComComplex(Complex o1, Complex o2){
+//     return(o1.b + o2.b);
+// }
+
+// int main(){
+//     Complex o1,o2;
+//     o1.setNumber(2,5);
+//     o2.setNumber(3,4);
+    
+//     Calculator cal;
+//     int res = cal.sumRealComplex(o1,o2);
+//     cout<<"your complex number is "<<res<<endl;
+//     res= cal.sumComComplex(o1,o2);
+//     cout<<"your complex number is "<<res<<endl;
+//     return 0; 
+
+// }
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// //copy constructor
+
+// class Student{
+//     string name;
+//     int rno ;
+//     float fee;
+//     public:
+   
+//     Student(string n,int r,float f){
+//         name = n;
+//         rno = r;
+//         fee = f;   
+//     }
+//     Student(Student &s){
+//           cout<<"copy constructor "<<endl;
+//         name=s.name;
+//         rno=s.rno;
+//         fee=s.fee;
+//     }
+//     void display(){
+//         cout<<" name : "<<name
+//         <<"\n rno "<<rno
+//         <<"\n fee "<<fee<<endl;
+//     }
+// };
+// int main(){
+//     Student s("ritesh", 266,1500000) ;
+//     s.display();
+  
+//     Student s1(s);
+//     s1.display();
+
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     for(int i=1;i<=5;i++){
+//       for(int j=1;j<=i;j++){
+//         cout<<"*";
+//       }
+//       cout<<endl;
+//     }
+//     return 0;
+// }
 #include<iostream>
 using namespace std;
-class Complex;
-class Calculator{
-    public:
-    int add(int a, int b){
-        return a+b;
-    } 
-    int sumRealComplex(Complex, Complex);
-    int sumComComplex(Complex,Complex);
-  
-};
-class Complex{
-      int a,b;
-      friend class Calculator;
-      public:
-      void setNumber(int n1,int n2){
-        a = n1;
-        b = n2;
-      }
-      void printNumber(){
-        cout<<"your complex number is : "<<a<<" + "<<b<<"i"<<endl;
-      }
-};
-int Calculator::sumRealComplex(Complex o1, Complex o2){
-    return(o1.a + o2.a);
-}
-int Calculator::sumComComplex(Complex o1, Complex o2){
-    return(o1.b + o2.b);
-}
-
 int main(){
-    Complex o1,o2;
-    o1.setNumber(2,5);
-    o2.setNumber(3,4);
-    
-    Calculator cal;
-    int res = cal.sumRealComplex(o1,o2);
-    cout<<"your complex number is "<<res<<endl;
-    res= cal.sumComComplex(o1,o2);
-    cout<<"your complex number is "<<res<<endl;
-    return 0; 
+  int a,b,c;
+  cout<<"ente a number a,b and c : "<<endl;
+  cin>>a>>b>>c;
+  if(0<a&& a<10 || 0<b&&b<10 || 0<c&&c<10){
+    if(a==b&& b==c&& c==a){
+     cout<<"eqaleteral trangle ";
+    }else if(a==b && b!=c|| a!=b && c==a){
+     cout<<"issoscales trangle";
 
+    }else{
+     cout<<"isoles trangle";
+    }
+  }else{
+     cout<<"invalid";
+  }
+  return 0;
 }
+
